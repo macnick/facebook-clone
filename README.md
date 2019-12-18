@@ -21,6 +21,7 @@ gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'rails', '~> 5.2.3'
 gem 'faker', '~> 1.6', '>= 1.6.6'
+gem 'omniauth-facebook', '~> 5.0'
 ```
 
 👤 **Author1**
