@@ -3,4 +3,6 @@ class UsersController < ApplicationController
     end
     def crete
     end
+    def index
+    end
 end
