@@ -23,9 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: fb-clone_development
-  username: fb-clone
-  password: ilmm3290@
+  database: fb_clone_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -54,7 +52,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: fb-clone_test
+  database: fb_clone_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -77,6 +75,6 @@ test:
 #
 production:
   <<: *default
-  database: fb-clone_production
+  database: fb_clone_production
   username: fb-clone
-  password: ilmm3290@
+  password: foobar12345
