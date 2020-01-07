@@ -77,4 +77,4 @@ production:
   <<: *default
   database: fb_clone_production
   username: fb-clone
-  password: foobar12345
+  password: ilmm3290@
