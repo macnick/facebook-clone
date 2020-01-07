@@ -8,10 +8,10 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav mr-auto">
       <% if signed_in? %>
-        <li class="nav-item"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'text-danger' %></li>
+        <li class="nav-item text-white"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'text-danger' %></li>
         <a href="">
         <%= image_tag asset_path('default_avatar'), class: "img-fluid profile-avatar img-pro-size" %>
-        <span class="white"><%= link_to "#{current_user.first_name}", user_path(current_user.id) %></span>
+        <span class="text-white"><%= link_to "#{current_user.first_name}", user_path(current_user.id) %></span>
         </a>
       <% else %>  
         <li class="nav-item"><%= link_to 'Users', user_registration_path, class: 'text-white pr-2' %></li>

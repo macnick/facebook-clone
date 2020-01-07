@@ -1,1 +1,22 @@
 <h1 class="center">Index listing of posts</h1>
+
+<div class="container">
+    
+    <div class="row">
+        Username: <%= current_user.first_name %>
+    </div>
+    <div class="row">
+        <div class="shadow-lg p-3 mb-5 bg-white rounded col-md-8 offset-md-2">
+            <h2 class="text-center"><i class="fa fa-comment"></i> Create Post</h2>
+            <%= form_for(@post) do |f| %>
+                <div class="field">
+                    <%= f.label :post_text %><br />
+                    <%= f.text_area :post_text, autofocus: true, class: "form-control" %>
+                </div>
+                <div class="actions">
+                    <%= f.submit "Create Post", class: "form-control btn btn-success mt-1" %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>
