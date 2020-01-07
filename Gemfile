@@ -14,6 +14,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'faker', '~> 1.6', '>= 1.6.6'
 gem 'font-awesome-sass', '~> 5.11.2'
+gem 'hirb'
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
