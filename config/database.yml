@@ -24,7 +24,8 @@ default: &default
 development:
   <<: *default
   database: fb_clone_development
-
+  username: fb-clone
+  password: foobar12345
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -77,4 +78,4 @@ production:
   <<: *default
   database: fb_clone_production
   username: fb-clone
-  password: ilmm3290@
+  password: foobar12345
