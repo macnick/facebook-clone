@@ -15,3 +15,23 @@
  */
 
 @import "bootstrap";
+@import "font-awesome";
+.w-40 {
+    width: 50%;
+    text-align: center !important;
+}
+
+.img-pro-size {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.white {
+    color: white;
+    font-weight: 300;
+}
+
+.fa-facebook-square {
+    color: white;
+}

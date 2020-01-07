@@ -1,7 +1,7 @@
 <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-light bg-primary">
 <div class="container">
-
-  <%= link_to "Facebook", root_path, class: "text-success" %>
+  <i class="fa fa-facebook-square fa-2x mt-1 mr-2 fa-bg-white fb"></i>
+  <%= link_to "Facebook", root_path, class: "text-white pr-2" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -9,10 +9,14 @@
     <ul class="navbar-nav mr-auto">
       <% if signed_in? %>
         <li class="nav-item"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'text-danger' %></li>
+        <a href="">
+        <%= image_tag asset_path('default_avatar'), class: "img-fluid profile-avatar img-pro-size" %>
+        <span class="white"><%= current_user.first_name %></span>
+        </a>
       <% else %>  
-        <li class="nav-item"><%= link_to 'Users', user_registration_path, class: 'text-danger' %></li>
-        <li class="nav-item"><%= link_to 'Sign in', user_session_path, class: 'text-danger' %></li>
-        <li class="nav-item"><%= link_to 'Sign up', new_user_registration_path, class: 'text-danger' %></li>
+        <li class="nav-item"><%= link_to 'Users', user_registration_path, class: 'text-white pr-2' %></li>
+        <li class="nav-item"><%= link_to 'Sign in', user_session_path, class: 'text-white pr-2' %></li>
+        <li class="nav-item"><%= link_to 'Sign up', new_user_registration_path, class: 'text-white pr-2' %></li>
       <% end %>
     </ul>
   </div>

@@ -8,10 +8,12 @@ RSpec.describe User, type: :model do
   # end
 
   context ' validates #first_name ' do
-    it ' ensures first name presence ' do
-      first_name = User.new(first_name: 'Daniel', last_name: 'Addo', email: 'addo@gmail.com', password: 'foobar').save
-      first_name.valid?
-      expect(first_name).to eq(true)
+    it ' ensures name presence ' do
+      user = User.new(first_name: '', last_name: 'Addo', email: 'nick@gmail.com', password: 'foobar')
+      user.valid?
+      expect(user.errors[:first_name]).to include("can't be blank")
+      # first_name = User.new(first_name: '', last_name: 'Addo', email: 'nick@gmail.com', password: 'foobar').save
+      # expect(first_name.errors.full_messages[:first_name]).to include("can't be blank")
     end
   end
 
@@ -19,7 +21,7 @@ RSpec.describe User, type: :model do
   #   it ' check presence of #first_name' do
   #     @user.first_name = ''
   #     @user.valid?
-  #     expect(@user.errors.full_messages[:first_name]).to include("can't be blank")
+  #     expect(@user.errors.full_messages[:first_name]).to_not include("can't be blank")
 
   #     @user.first_name = 'Daniel'
   #     @user.valid?

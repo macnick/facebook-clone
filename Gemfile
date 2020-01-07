@@ -17,6 +17,7 @@ gem 'font-awesome-sass', '~> 5.11.2'
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'activesupport', '~> 5.2.4.1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -34,6 +35,7 @@ gem 'omniauth-facebook', '~> 5.0'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'rack', '~> 2.0', '>= 2.0.8'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
