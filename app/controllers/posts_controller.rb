@@ -3,6 +3,7 @@
 class PostsController < ApplicationController
   def index
     @post = Post.new
+    @user_posts = current_user.posts
   end
 
   def create
@@ -13,6 +14,12 @@ class PostsController < ApplicationController
   end
 
   def show; end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path
+  end
 
   private
 
