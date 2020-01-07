@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'users#index'  
+  
+  root to: 'users#show'  
   # root to: "devise/registrations#new"
   # devise_for :users
   devise_for :users

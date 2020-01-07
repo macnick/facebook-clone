@@ -11,7 +11,7 @@
         <li class="nav-item"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'text-danger' %></li>
         <a href="">
         <%= image_tag asset_path('default_avatar'), class: "img-fluid profile-avatar img-pro-size" %>
-        <span class="white"><%= current_user.first_name %></span>
+        <span class="white"><%= link_to "#{current_user.first_name}", user_path(current_user.id) %></span>
         </a>
       <% else %>  
         <li class="nav-item"><%= link_to 'Users', user_registration_path, class: 'text-white pr-2' %></li>
