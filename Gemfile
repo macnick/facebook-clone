@@ -9,7 +9,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3.1'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'rails', '~> 5.2.3'
-# gem "chromedriver-helper"
 gem 'coffee-rails', '~> 4.2'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'faker', '~> 1.6', '>= 1.6.6'
@@ -18,7 +17,6 @@ gem 'font-awesome-sass', '~> 5.11.2'
 gem 'hirb'
 gem 'jbuilder', '~> 2.5'
 gem 'omniauth-facebook', '~> 5.0'
-# Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'rack', '~> 2.0', '>= 2.0.8'
@@ -37,7 +35,6 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
 end
