@@ -9,6 +9,7 @@ gem 'activesupport', '~> 5.2.4.1'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3.1'
 gem 'bootstrap-will_paginate', '1.0.0'
+# gem "chromedriver-helper"
 gem 'coffee-rails', '~> 4.2'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'faker', '~> 1.6', '>= 1.6.6'
