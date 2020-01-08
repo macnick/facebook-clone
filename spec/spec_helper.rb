@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'capybara/rspec'
 require 'selenium/webdriver'
 
@@ -87,11 +88,10 @@ RSpec.configure do |config|
   #   # test failures related to randomization by passing the same `--seed` value
   #   # as the one that triggered the failure.
   #   Kernel.srand config.seed
-  
 end
 
 Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+  Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
 
 Capybara.configure do |config|

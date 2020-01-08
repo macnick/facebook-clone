@@ -18,9 +18,8 @@ RSpec.describe Post, type: :model do
     it 'is not valid without a user_id' do
       @post.user_id = nil
       @post.save
-      expect(@post.errors.full_messages).to include("User must exist")
+      expect(@post.errors.full_messages).to include('User must exist')
       @post.user_id = 1
     end
-
   end
 end

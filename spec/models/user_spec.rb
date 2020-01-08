@@ -19,23 +19,21 @@ RSpec.describe User, type: :model do
       @user1.last_name = nil
       @user1.save
       expect(@user1.errors.full_messages).to include("Last name can't be blank")
-      @user1.last_name = "Addo"
+      @user1.last_name = 'Addo'
     end
 
     it 'is not valid without an email' do
       @user1.email = nil
       @user1.save
       expect(@user1.errors.full_messages).to include("Email can't be blank")
-      @user1.email = "test@test.com"
+      @user1.email = 'test@test.com'
     end
 
     it 'is not valid without an password' do
       @user1.password = nil
       @user1.save
       expect(@user1.errors.full_messages).to include("Password can't be blank")
-      @user1.password = "foobar"
+      @user1.password = 'foobar'
     end
-
   end
-
 end
