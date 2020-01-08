@@ -8,7 +8,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse float-right" id="navbarNavDropdown">
-      <ul class="nav navbar-nav mr-auto ml-6">
+      <ul class="nav navbar-nav justify-content-end">
         <% if signed_in? %>
           <li class="nav-item text-white"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'text-danger' %></li>
           <a href="">

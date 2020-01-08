@@ -1,10 +1,12 @@
-<div class="row">
-    <div class="col-md-6">
-        <h2>Recent Logins</h2>
-    </div>
-    <div class="col-md-6">
-        <h2>Create a New Account</h2>
-        <span>it's quick and easy.</span>
+
+<div class="container mt-3">
+
+    <div class="row justify-content-between">
+        <% @users.each do |user| %>
+            <div class="p-3 mb-3 bg-secondary rounded col-md-8 offset-md-2 text-white">
+                <%= user.first_name %> <%= user.last_name %>
+                <%= button_to "Add friend", "#", class:"btn btn-success btn-sm" %>
+            </div>
+        <% end %>
     </div>
 </div>
-
