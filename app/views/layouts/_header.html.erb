@@ -1,25 +1,27 @@
 <%# <nav class="navbar navbar-fixed-top navbar-inverse d-flex justify-content-center"> %>
 
-<nav class="navbar navbar-fixed-top navbar-expand-lg navbar-light bg-primary">
+<nav class="navbar navbar-fixed-top navbar-expand-md navbar-light bg-primary">
   <div class="container">
     <i class="fa fa-facebook-square fa-2x mt-1 mr-2 fa-bg-white fb"></i>
     <%= link_to "Facebook", root_path, class: "text-white pr-2" %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse float-right" id="navbarNavDropdown">
-      <ul class="nav navbar-nav justify-content-end">
-        <% if signed_in? %>
-          <li class="nav-item text-white"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'text-danger' %></li>
-          <a href="">
-          <%= image_tag asset_path('default_avatar'), class: "img-fluid profile-avatar img-pro-size" %>
-          <span><%= link_to "#{current_user.first_name}", user_path(current_user.id), class: 'text-white' %></span>
-          </a>
-        <% else %>  
-          <li class="nav-item"><%= link_to 'Log in', user_session_path, class: 'text-white pr-2' %></li>
-          <li class="nav-item"><%= link_to 'Sign up', new_user_registration_path, class: 'text-white pr-2' %></li>
-        <% end %>
-      </ul>
+    <div class="container">
+      <div class="collapse navbar-collapse float-right" id="navbarNavDropdown">
+        <ul class="nav navbar-nav justify-content-end">
+          <% if signed_in? %>
+            <li class="nav-item text-white"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'text-danger pr-4' %></li>
+            <a href="">
+            <%= image_tag asset_path('default_avatar'), class: "img-fluid profile-avatar img-pro-size" %>
+            <span><%= link_to "#{current_user.first_name}", user_path(current_user.id), class: 'text-white pl-2' %></span>
+            </a>
+          <% else %>  
+            <li class="nav-item"><%= link_to 'Log in', user_session_path, class: 'text-white pr-2' %></li>
+            <li class="nav-item"><%= link_to 'Sign up', new_user_registration_path, class: 'text-white pr-2' %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
