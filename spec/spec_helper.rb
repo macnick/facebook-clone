@@ -93,4 +93,10 @@ RSpec.configure do |config|
   #   # test failures related to randomization by passing the same `--seed` value
   #   # as the one that triggered the failure.
   #   Kernel.srand config.seed
+  
+end
+Capybara.configure do |config|
+  config.run_server = false
+  config.default_driver = :selenium
+  config.app_host = 'localhost:3000' # change url
 end
