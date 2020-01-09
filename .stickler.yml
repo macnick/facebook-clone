@@ -1,10 +1,13 @@
+
+#frozen_string_literal
+
 linters:
   rubocop:
-    fixer: true
-  csslint: {  }
+    display_cop_names: true
 files:
   ignore:
-    - 'bower_components/*'
-    - 'node_modules/*'
-fixers:
-  enable: true
+    - "bin/*"
+    - "db/*"
+    - "config/*"
+    - "Guardfile"
+    - "Rakefile"

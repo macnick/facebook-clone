@@ -6,6 +6,7 @@ to odin project instructions:
 [Getting Started](https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project)
 
 ### Requirements
+
 ```
 - A Cloud Server running Linux (Ubuntu 18.04) or (Mac OS)
 - PostgreSQL installed and running.
@@ -18,10 +19,17 @@ to odin project instructions:
 
 ```
 gem 'devise', '~> 4.7', '>= 4.7.1'
+gem 'faker', '~> 1.6', '>= 1.6.6'
+gem 'font-awesome-sass'
+gem 'omniauth-facebook', '~> 5.0'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'rails', '~> 5.2.3'
-gem 'faker', '~> 1.6', '>= 1.6.6'
-gem 'omniauth-facebook', '~> 5.0'
+```
+
+### Optional Install
+
+```
+gem hirb
 ```
 
 👤 **Author1**
@@ -36,7 +44,6 @@ gem 'omniauth-facebook', '~> 5.0'
 - Twitter: [@DanielLarbiAdd1](https://twitter.com/DanielLarbiAdd1)
 - Linkedin: [Daniel Larbi Addo](https://linkedin.com/in/daniel-larbi-addo-9738b0128/)
 
-
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
@@ -47,8 +54,10 @@ Feel free to check the [issues page](https://github.com/macnick/facebook-clone/i
 
 Give a ⭐️ if you like this project!
 
-
 ## 📝 License
 
 This project is [MiT](LICENSE) licensed.
 
+```
+
+```
