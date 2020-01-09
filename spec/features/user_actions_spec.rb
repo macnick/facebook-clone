@@ -9,9 +9,9 @@ end
 
 fname = rnd_str
 
-feature 'User signs up and logs in' do
-  
-  scenario 'user can create an account using the signup form' do
+feature 'User' do
+
+  scenario 'can create an account using the signup form' do
     visit '/users/sign_up'
     fill_in 'First name', with: fname
     fill_in 'Last name', with: rnd_str
@@ -22,14 +22,23 @@ feature 'User signs up and logs in' do
     expect(page).to have_content('Welcome! You have signed up successfully')
   end
 
-  scenario 'user can log in using the log in form' do
+  scenario 'can log in using the log in form' do
     visit '/users/sign_in'
     fill_in 'Email', with: "#{fname}@test.com"
     fill_in 'Password', with: 'foobar'
     click_button 'Log in'
     expect(page).to have_content('Signed in successfully.')
-    click_link 'Sign Out'
   end
   
+  scenario 'can create a post' do
+    visit '/users/sign_in'
+    fill_in 'Email', with: "#{fname}@test.com"
+    fill_in 'Password', with: 'foobar'
+    click_button 'Log in'
+    visit '/posts'
+    fill_in 'post_post_text', with: 'This is a test post'
+    click_button 'Create Post'
+    expect(page).to have_content('This is a test post')
+  end
 
 end
