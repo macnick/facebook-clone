@@ -10,7 +10,6 @@ end
 fname = rnd_str
 
 feature 'User' do
-
   scenario 'can create an account using the signup form' do
     visit '/users/sign_up'
     fill_in 'First name', with: fname
@@ -29,7 +28,9 @@ feature 'User' do
     click_button 'Log in'
     expect(page).to have_content('Signed in successfully.')
   end
-  
+end
+
+feature 'User also' do
   scenario 'can create a post' do
     visit '/users/sign_in'
     fill_in 'Email', with: "#{fname}@test.com"
@@ -40,5 +41,4 @@ feature 'User' do
     click_button 'Create Post'
     expect(page).to have_content('This is a test post')
   end
-
 end

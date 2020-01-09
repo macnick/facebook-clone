@@ -8,7 +8,6 @@ gem 'activesupport', '~> 5.2.4.1'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.3.1'
 gem 'bootstrap-will_paginate', '1.0.0'
-gem 'rails', '~> 5.2.3'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'faker', '~> 1.6', '>= 1.6.6'
@@ -20,6 +19,7 @@ gem 'omniauth-facebook', '~> 5.0'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'rack', '~> 2.0', '>= 2.0.8'
+gem 'rails', '~> 5.2.3'
 gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
@@ -42,9 +42,9 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'web-console', '>= 3.3.0'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'web-console', '>= 3.3.0'
 end
 
 group :test do

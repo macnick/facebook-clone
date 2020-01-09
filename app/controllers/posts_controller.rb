@@ -3,7 +3,7 @@
 class PostsController < ApplicationController
   def index
     @post = Post.new
-    @user_posts = Post.all #current_user.posts
+    @user_posts = Post.all # current_user.posts
   end
 
   def create
