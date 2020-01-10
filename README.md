@@ -1,4 +1,4 @@
-# Project Setup: Milestone 2
+# Project Setup: Milestone 4
 
 In this project, we will setup the project requirement for this milestone. Below is the link
 to odin project instructions:
