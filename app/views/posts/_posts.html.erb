@@ -7,8 +7,18 @@
         <% end %>
 
 
-        <%= render 'comments/comment_form' %>
-        
+        <%#= render 'comments/comment_form' %>
+        <%= form_for [@comment] do |f| %>
+
+          <%= f.hidden_field :post_id, :post_id => user_post.id %>
+          <div class="field">
+              <%= f.label 'Comment' %><br />
+              <%= f.text_area :comment_text, class: "form-control", placeholder: "Comment on this post...#{user_post.id}" %>
+          </div>
+          <div class="actions">
+              <%= f.submit "Create Comment", class: "form-control btn btn-success mt-1", data: {user_id:user_post.id} %>
+          </div>
+        <% end %>
 
 
 
