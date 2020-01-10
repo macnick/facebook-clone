@@ -5,7 +5,7 @@
             <h2 class="text-center"><i class="fa fa-comment"></i> Create Post</h2>
             <%= form_for(@post) do |f| %>
                 <div class="field">
-                    <%= f.label 'Post' %><br />
+                    
                     <%= f.text_area :post_text, class: "form-control", placeholder: "What's on your mind, #{current_user.first_name}" %>
                 </div>
                 <div class="actions">
