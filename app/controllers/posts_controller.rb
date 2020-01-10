@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   def index
     @post = Post.new
     @user_posts = Post.order(id: :desc) # current_user.posts
+    @comment = Comment.new
   end
 
   def create

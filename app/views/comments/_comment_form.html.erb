@@ -1,0 +1,9 @@
+<%= form_for(@comment) do |f| %>
+    <div class="field">
+        <%= f.label 'Comment' %><br />
+        <%= f.text_area :comment_text, class: "form-control", placeholder: "Comment on this post..." %>
+    </div>
+    <div class="actions">
+        <%= f.submit "Create Comment", class: "form-control btn btn-success mt-1" %>
+    </div>
+<% end %>
