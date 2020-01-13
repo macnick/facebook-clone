@@ -5,6 +5,7 @@ class PostsController < ApplicationController
     @post = Post.new
     @user_posts = Post.order(id: :desc) # current_user.posts
     @comment = Comment.new
+    @like = Like.new
   end
 
   def create

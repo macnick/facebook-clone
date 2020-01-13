@@ -5,15 +5,25 @@
       <% if current_user.id == user_post.user.id %>
           <%= button_to 'delete', user_post, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger btn-sm' %> 
       <% end %>
+
+       <%= form_for @like do |f| %>
+        <%= hidden_field_tag "user_id", "#{current_user.id}" %>
+        <%= hidden_field_tag "post_id", "#{user_post.id}" %>
+        <div class="actions">
+            <%= f.submit "Like", class: "form-control btn btn-success mt-1" %>
+        </div>
+       <% end %>
+      
+      <%= user_post.likes.size %>
+      
       <%= form_for [@comment] do |f| %>
         <%= hidden_field_tag "post_id", "#{user_post.id}" %>
-        
         <div class="field">
             <%= f.label 'Comment' %><br />
-            <%= f.text_area :comment_text, class: "form-control", placeholder: "Comment on this post...#{user_post.id}" %>
+            <%= f.text_area :comment_text, class: "form-control", placeholder: "Comment on this post..." %>
         </div>
         <div class="actions">
-            <%= f.submit "Create Comment", class: "form-control btn btn-success mt-1", data: {user_id:user_post.id} %>
+            <%= f.submit "Create Comment", class: "form-control btn btn-success mt-1" %>
         </div>
       <% end %>
     </div>
