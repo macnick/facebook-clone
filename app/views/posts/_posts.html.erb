@@ -20,10 +20,10 @@
         <%= hidden_field_tag "post_id", "#{user_post.id}" %>
         <div class="field">
             <%= f.label 'Comment' %><br />
-            <%= f.text_area :comment_text, class: "form-control", placeholder: "Comment on this post..." %>
+            <%= f.text_area :comment_text, class: "form-control", placeholder: "Comment on this post...", id:"comment-#{user_post.id}" %>
         </div>
         <div class="actions">
-            <%= f.submit "Create Comment", class: "form-control btn btn-success mt-1" %>
+            <%= f.submit "Create Comment", class: "form-control btn btn-success mt-1", id: "button-#{user_post.id}" %>
         </div>
       <% end %>
     </div>

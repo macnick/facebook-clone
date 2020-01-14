@@ -41,4 +41,5 @@ feature 'User also' do
     click_button 'Create Post'
     expect(page).to have_content('This is a test post')
   end
+
 end
