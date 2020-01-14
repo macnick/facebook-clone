@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
@@ -6,7 +8,6 @@ RSpec.describe Like, type: :model do
   end
 
   context 'validates like record' do
-
     it 'is not valid without a user_id' do
       @like.user_id = nil
       @like.save
