@@ -6,4 +6,9 @@ module PostsHelper
       button_to 'delete', user_post, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger btn-sm'
     end
   end
+
+  def post_comments(user_post)
+    @comments = user_post.comments
+    render partial: 'comments/comments'#, collection: @comments
+  end
 end
