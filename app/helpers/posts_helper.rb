@@ -9,6 +9,6 @@ module PostsHelper
 
   def post_comments(user_post)
     @comments = user_post.comments
-    render partial: 'comments/comments' # , collection: @comments
+    render partial: 'comments/comments'
   end
 end
