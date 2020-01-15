@@ -42,4 +42,3 @@ feature 'User also' do
     expect(page).to have_content('This is a test post')
   end
 end
-
