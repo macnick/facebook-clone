@@ -31,15 +31,28 @@ feature 'User' do
 end
 
 feature 'User also' do
-  scenario 'can create a post' do
-    visit '/users/sign_in'
-    fill_in 'Email', with: "#{fname}@test.com"
-    fill_in 'Password', with: 'foobar'
-    click_button 'Log in'
-    visit '/posts'
-    fill_in 'post_post_text', with: 'This is a test post'
-    click_button 'Create Post'
-    expect(page).to have_content('This is a test post')
-  end
+  # scenario 'can create a post' do
+  #   visit '/users/sign_in'
+  #   fill_in 'Email', with: "#{fname}@test.com"
+  #   fill_in 'Password', with: 'foobar'
+  #   click_button 'Log in'
+  #   visit '/posts'
+  #   fill_in 'post_post_text', with: 'This is a test post'
+  #   click_button 'Create Post'
+  #   expect(page).to have_content('This is a test post')
+  # end
 
+  feature 'Comments can be created' do
+    scenario 'successfully' do
+      visit '/users/sign_in'
+      fill_in 'Email', with: "#{fname}@test.com"
+      fill_in 'Password', with: 'foobar'
+      click_button 'Log in'
+      visit '/posts/'
+      fill_in 'Comment', with: 'This is a test comment'
+      click_button 'Create Comment'
+      expect(page).to have_content('This is a test comment')
+    end
+  end
+  
 end

@@ -5,3 +5,26 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+nick = User.create( 
+  email: 'nick@test.com' ,
+  password: '123456' ,
+  password_confirmation: '123456'
+    )
+
+daniel = User.create(
+    email: 'daniel@test.com' ,
+    password: '123456' ,
+    password_confirmation: '123456'
+   )
+
+michael = User.create(
+      email: 'michael@tst.com' ,
+      password: '123456' ,
+      password_confirmation: '123456'
+      )
+
+post1 = Post.create( post_text: 'Seed first post' ,
+        user_id: 1 )
+
+post2 = Post.create( post_text: 'Seed Second post' ,
+     user_id: 2)
