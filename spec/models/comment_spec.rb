@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
   before(:all) do
-    @comment = Comment.new(comment_text: "this is a test", post_id: 1, user_id: 1)
+    @comment = Comment.new(comment_text: 'this is a test', post_id: 1, user_id: 1)
   end
 
   context 'validates comment field' do
