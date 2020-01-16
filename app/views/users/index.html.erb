@@ -5,7 +5,14 @@
         <% @users.each do |user| %>
             <div class="p-3 mb-3 bg-secondary rounded col-md-8 offset-md-2 text-white">
                 <%= user.first_name %> <%= user.last_name %>
-                <%= button_to "Add friend", "#", class:"btn btn-success btn-sm" %>
+                <%= form_for @friendship do |f| %>
+                    <%= hidden_field_tag "friend_id", "#{user.id}" %>
+                    <%= hidden_field_tag "confirmed", "false" %>
+                    <div class="actions">
+                        <%= f.submit "Add friend", class: "form-control btn btn-success mt-1" %>
+                    </div>
+                <% end %>
+                <%#= button_to "Add friend", , class:"btn btn-success btn-sm" %>
             </div>
         <% end %>
     </div>
