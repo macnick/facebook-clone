@@ -1,4 +1,4 @@
-# Project Setup: Milestone 2
+# Project Setup: Milestone 4
 
 In this project, we will setup the project requirement for this milestone. Below is the link
 to odin project instructions:
@@ -15,21 +15,28 @@ to odin project instructions:
 
 ```
 
-### Install
+### Gems
+
+- gem 'devise', '~> 4.7', '>= 4.7.1'
+- gem 'faker', '~> 1.6', '>= 1.6.6'
+- gem 'font-awesome-sass'
+- gem 'omniauth-facebook', '~> 5.0'
+- gem 'pg', '>= 0.18', '< 2.0'
+- gem 'rails', '~> 5.2.3'
+
+#### Optional
+
+- gem hirb
+
+### Installation
+
+Clone or download this repository to your local machine. After cloning open your terminal on the repository folder and run :
 
 ```
-gem 'devise', '~> 4.7', '>= 4.7.1'
-gem 'faker', '~> 1.6', '>= 1.6.6'
-gem 'font-awesome-sass'
-gem 'omniauth-facebook', '~> 5.0'
-gem 'pg', '>= 0.18', '< 2.0'
-gem 'rails', '~> 5.2.3'
-```
-
-### Optional Install
-
-```
-gem hirb
+bundle install
+rails db:create
+rails db:migrate
+rails db:seed
 ```
 
 👤 **Author1**
