@@ -15,6 +15,7 @@
             <a href="">
             <%= image_tag asset_path('default_avatar'), class: "img-fluid profile-avatar img-pro-size" %>
             <span><%= link_to "#{current_user.first_name}", posts_path, class: 'text-white pl-2' %></span>
+            <%#= friend_requests.size %>
             </a>
           <% else %>  
             <li class="nav-item"><%= link_to 'Log in', user_session_path, class: 'text-white pr-2' %></li>
