@@ -10,7 +10,7 @@ module FriendshipsHelper
 
   def confirm_friend(f)
     if f.confirmed == false
-      render partial: 'friendships/confirmed', locals: { f: f}
+      render partial: '/friendships/confirm', locals: { f: f }
     end
   end
 end

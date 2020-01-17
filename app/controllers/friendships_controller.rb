@@ -13,7 +13,7 @@ class FriendshipsController < ApplicationController
     @friendship = Friendship.create(user_id: current_user.id, friend_id: user.id, confirmed: false)
     # if Friendship.where(user_id: @friendship.user_id, friend_id: @friendship.friend_id) 
     if @friendship.save
-      flash[:success] = "Friend request sent successufully"
+      flash[:success] = "Friend request sent successfully"
     else
       flash[:danger] = "Can not send friend request"
     end
@@ -23,6 +23,7 @@ class FriendshipsController < ApplicationController
   def update
     @friendship = Friendship.find(params[:id])
     @friendship.update_attributes confirmed: true
+    flash[:success] = "Friendship confirmed"
     redirect_to friendships_path
   end
 

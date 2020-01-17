@@ -2,6 +2,6 @@
     <%= hidden_field_tag "friend_id", "#{user.id}" %>
     <%= hidden_field_tag "confirmed", "false" %>
     <div class="actions">
-        <%= f.submit "Add friend", class: "form-control btn btn-success mt-1" %>
+        <%= f.submit "Add friend", class: "form-control btn btn-success mt-1", id:"button-#{user.id}" %>
     </div>
 <% end %>
