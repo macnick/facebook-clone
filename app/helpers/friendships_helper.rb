@@ -7,4 +7,10 @@ module FriendshipsHelper
   def unconfirmed_requests
     current_user.inverse_friendships.where(confirmed: false)
   end
+
+  def confirm_friend(f)
+    if f.confirmed == false
+      render partial: 'friendships/confirmed', locals: { f: f}
+    end
+  end
 end
