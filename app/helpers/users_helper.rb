@@ -9,4 +9,10 @@ module UsersHelper
   def request_sent user
     render '/users/add_friend' if friendship.include? user && !friendship.confirmed
   end
+
+  def toggle_button(user)
+    if current_user.friendships.where(friend_id: user.id).size  == 0 && current_user.id != user.id
+      render partial: 'users/toggle_button', locals: { user: user }
+    end      
+  end
 end
