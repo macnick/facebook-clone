@@ -1,6 +1,7 @@
+# frozen_string_literal: true
 
-module FriendshipsHelper 
-  def delete_button(friend)
+module FriendshipsHelper
+  def delete_button(_friend)
     button_to 'delete', friendship, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm'
   end
 
@@ -8,9 +9,7 @@ module FriendshipsHelper
     current_user.inverse_friendships.where(confirmed: false)
   end
 
-  def confirm_friend(f)
-    if f.confirmed == false
-      render partial: '/friendships/confirm', locals: { f: f }
-    end
+  def confirm_friend(fri)
+    render partial: '/friendships/confirm', locals: { fri: fri } if fri.confirmed == false
   end
 end

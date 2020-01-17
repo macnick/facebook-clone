@@ -23,6 +23,4 @@ feature 'User can' do
     click_button 'Confirm friend'
     expect(page).to have_content('Friendship confirmed')
   end
-
-
 end
