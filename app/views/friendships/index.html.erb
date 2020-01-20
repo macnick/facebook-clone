@@ -1,0 +1,8 @@
+<h1 class="text-center">Friendship requests</h1>
+<% if unconfirmed_requests.size > 0 %>
+  <% @inverse_friendships.each do |f| %>
+    <%= confirm_friend(f) %>
+  <% end %>
+<% else %>
+  <h2 class="text-center">You have no friendship requests</h2>
+<% end %>
