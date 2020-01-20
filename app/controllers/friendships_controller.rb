@@ -25,9 +25,7 @@ class FriendshipsController < ApplicationController
     @friendship = Friendship.find(params[:id])
     @friendship.update_attributes confirmed: true
     @fs = Friendship.create(user_id: current_user.id, friend_id: @friendship.user_id, confirmed: true)
-    if @fs.save
-      flash[:success] = 'Friendship confirmed'
-    end
+    flash[:success] = 'Friendship confirmed' if @fs.save
     redirect_to friendships_path
   end
 
