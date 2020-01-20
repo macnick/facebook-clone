@@ -3,7 +3,8 @@
 class PostsController < ApplicationController
   def index
     @post = Post.new
-    @user_posts = Post.order(id: :desc) # current_user.posts
+    ids = current_user.friends.pluck(:id) << current_user.id
+    @user_posts = Post.where(user_id: ids).order(id: :desc)
     @comment = Comment.new
     @like = Like.new
   end
@@ -14,7 +15,9 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
-  def show; end
+  def show; 
+  
+  end
 
   def destroy
     @post = Post.find(params[:id])

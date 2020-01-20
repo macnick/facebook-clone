@@ -13,7 +13,6 @@ class FriendshipsController < ApplicationController
   def create
     user = User.find(params[:friend_id])
     @friendship = Friendship.create(user_id: current_user.id, friend_id: user.id, confirmed: false)
-    # if Friendship.where(user_id: @friendship.user_id, friend_id: @friendship.friend_id)
     if @friendship.save
       flash[:success] = 'Friend request sent successfully'
     else
@@ -24,7 +23,6 @@ class FriendshipsController < ApplicationController
 
   def update
     @friendship = Friendship.find(params[:id])
-    # confirm_friend
     @friendship.update_attributes confirmed: true
     @fs = Friendship.create(user_id: current_user.id, friend_id: @friendship.user_id, confirmed: true)
     if @fs.save
