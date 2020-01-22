@@ -3,7 +3,7 @@
 class PostsController < ApplicationController
   def index
     @post = Post.new
-    ids = current_user.friends.pluck(:id) << current_user.id
+    ids = current_user.friends ? current_user.friends.pluck(:id) << current_user.id : current_user.id
     @user_posts = Post.where(user_id: ids).order(id: :desc)
     @comment = Comment.new
     @like = Like.new
