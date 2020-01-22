@@ -16,7 +16,7 @@ class User < ApplicationRecord
   def friends
     friends_array = friendships.map { |f| f.friend if f.confirmed }
     friends_array.concat(inverse_friendships.map { |f| f.user if f.confirmed })
-    friends_array.compact
+    friends_array.compact.uniq!
   end
 
   def pending_friends

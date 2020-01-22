@@ -15,7 +15,7 @@
             <%= image_tag asset_path('default_avatar'), class: "img-fluid profile-avatar img-pro-size" %>
             <span><%= link_to "#{current_user.first_name}", posts_path, class: 'text-white pl-2' %></span>
             <li class="nav-item text-white">
-              <span><%= link_to "Friends (#{current_user.friends.size})", friends_path, class: 'text-white pl-2' %></span>
+              <span><%= link_to "Friends (#{all_friends})", friends_path, class: 'text-white pl-2' %></span>
             </li>
             <li class="nav-item text-white">
               <span><%= link_to "Friend requests (#{unconfirmed_requests.size})", friendships_path, class: 'text-white pl-2' %></span>
