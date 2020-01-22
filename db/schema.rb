@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_16_091354) do
+ActiveRecord::Schema.define(version: 2020_01_21_091154) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 2020_01_16_091354) do
     t.boolean "confirmed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index "GREATEST(user_id, friend_id), LEAST(user_id, friend_id)", name: "index_friendships_on_interchangable_user_id_and_friend_id", unique: true
+    t.index "LEAST(user_id, friend_id), GREATEST(user_id, friend_id)", name: "index_friendships_on_interchangable_friend_id_and_user_id", unique: true
     t.index ["friend_id"], name: "index_friendships_on_friend_id"
     t.index ["user_id"], name: "index_friendships_on_user_id"
   end
