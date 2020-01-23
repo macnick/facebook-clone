@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   post '/acceptfriend', to: 'friendships#create'
   # post 'friendships', to: 'friendships#cancel_request'
   # post 'friendships', to: 'friendships#create'
-  resources :friendships, only: [:index]
+  resources :friendships, only: [:index, :show, :update]
   get 'friends', to: 'users#friends'
   # post 'friendships', to: 'friendships#destroy'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -11,6 +11,7 @@ module FriendshipsHelper
 
   def all_friends
     return current_user.friends.size unless current_user.friends.nil?
+
     0
   end
 

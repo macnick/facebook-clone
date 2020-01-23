@@ -10,6 +10,5 @@ class UsersController < ApplicationController
     @user = User.find(current_user.id)
   end
 
-  def friends
-  end
+  def friends; end
 end
