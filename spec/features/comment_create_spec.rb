@@ -10,8 +10,8 @@ feature 'Comments can be created' do
     fill_in 'Password', with: '123456'
     click_button 'Log in'
     visit '/posts'
-    fill_in 'comment-2', with: 'This is a test comment'
-    click_button 'button-2'
+    fill_in 'comment-1', with: 'This is a test comment'
+    click_button 'button-1'
     expect(page).to have_content('This is a test comment')
   end
 end

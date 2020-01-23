@@ -9,14 +9,6 @@ module UsersHelper
     render '/users/add_friend' if friendship.include?(user) && !friendship.confirmed
   end
 
-  # def toggle_button(user)
-  #     return unless current_user.friendships.where(friend_id: user.id).empty? &&
-  #                   current_user.inverse_friendships.where(user_id: user.id).empty? &&
-  #                   current_user.id != user.id
-
-  #   render partial: 'users/toggle_button', locals: { user: user }
-  # end
-
   def toggle_button(user)
     return unless current_user != user
 
@@ -30,5 +22,11 @@ module UsersHelper
                 method: :post, class: 'form-control btn btn-success mt-1',
                 id: "button-#{user.id}"
     end
+  end
+
+  def remove_friend(user)
+    button_to 'Remove Friend', { controller: 'friendships', action: 'destroy', friend_id: user },
+              method: :post, class: 'form-control btn btn-info mt-1',
+              id: "button-#{user.id}"
   end
 end

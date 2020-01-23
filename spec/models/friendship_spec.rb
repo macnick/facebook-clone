@@ -12,38 +12,17 @@ RSpec.describe Friendship, type: :model do
     it 'have receiver' do
       request = @user2.friendships.build
       request.valid?
-      expect(request.errors[:user_id]).to include('must exist')
+      expect(request.errors.full_messages).to include('Friend must exist')
 
-      request = @user2.friendships.build(sender: @user1)
-      expect(request.valid?).to eql(true)
-      expect(request.errors[:user_id]).to_not include('must exist')
+      request = Friendship.new(user_id: @user1.id, friend_id: @user2.id)
+      expect(request.valid?).to be(true)
+      expect(request.errors.full_messages).to be_empty
     end
 
     it 'creates friendship request' do
-      request = @user2.friendships.create(user_id: @user1)
-
-      expect(request.confirm_friend).to eql(false)
-      expect(Friendship.last.sender).to eql(@user1)
-    end
-  end
-
-  describe '#receiver' do
-    it 'have sender' do
-      request = @user1.friendships.build
-      request.valid?
-      expect(request.errors[:friend_id]).to include('must exist')
-
-      request = @user1.friendships.build(receiver: @user2)
-      expect(request.valid?).to eql(true)
-      expect(request.errors[:friend_id]).to_not include('must exist')
-    end
-
-    it 'creates friendship request' do
-      request = @user1.friendships.create(friend_id: @user2)
-
-      expect(request.confirm_friend).to eql(false)
-      expect(Friendship.last.user_id).to eql(@user1)
-      expect(Friendship.last.friend_id).to eql(@user2)
+      request = Friendship.new(user_id: @user1.id, friend_id: @user2.id)
+      expect(request.valid?).to be(true)
+      expect(request.user_id).to be @user1.id
     end
   end
 end

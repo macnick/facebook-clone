@@ -1,5 +1,5 @@
     <div class="p-3 mb-3 bg-secondary rounded col-md-8 offset-md-2 text-white">
-        <small>User: <%=  fri.user.first_name %> </small><br>     
+        <small>User: <%= fri.user.first_name %> <%= fri.user.last_name %></small><br>     
         <%= form_for fri do |friend| %>
             <%= hidden_field_tag "friend", fri %>
             <div class="actions">
