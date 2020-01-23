@@ -31,13 +31,7 @@ class FriendshipsController < ApplicationController
 
   def cancel
     request = current_user.friendships.where(friend_id: params[:friend_id])
-    if request[0].destroy
-      flash[:success] = 'Friend request cancelled'
-    end
-    # request = Friendship.where(user_id: current_user.id, friend_id: params[:id])
-    # friendship = Friendship.find(request.id)
-    # flash[:success] = 'Friend request cancelled' if friendship.destroy
-    # flash[:info] = "here is the #{friendship.id}"
+    flash[:success] = 'Friend request cancelled' if request[0].destroy
     redirect_to users_path
   end
 
