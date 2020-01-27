@@ -1,7 +1,7 @@
     <div class="p-3 mb-3 bg-secondary rounded col-md-8 offset-md-2 text-white">
-        <small>User: <%= fri.user.first_name %> <%= fri.user.last_name %></small><br>     
-        <%= form_for fri do |friend| %>
-            <%= hidden_field_tag "friend", fri %>
+        <small>User: <%= f.user.first_name %> <%= f.user.last_name %></small><br>     
+        <%= form_for f do |friend| %>
+            <%= hidden_field_tag "friend", f %>
             <div class="actions">
                 <%= friend.submit "Confirm friend", class: "btn btn-success mt-1" %>
             </div>
