@@ -36,12 +36,10 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    @friendship = Friendship.find(params[:id])
-    if @friendship.destroy
-      flash[:success] = 'Friend request cancelled'
-    else
-      flash[:danger] = 'An unknown error occured please try again'
-    end
-    redirect_to friendships_path
+    fs = current_user.friendships.where(friend_id: params[:friend_id]).ids.concat(current_user.inverse_friendships.where(user_id: params[:friend_id]).ids)
+    Friendship.delete(fs)
+
+    flash[:success] = "Friend removed successfully"
+    redirect_to friends_path
   end
 end

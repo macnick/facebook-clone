@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   post '/cancelfriend', to: 'friendships#cancel', as: 'cancelfriend'
   post '/acceptfriend', to: 'friendships#create'
+  post '/deletefriend', to: 'friendships#destroy'
   resources :friendships, only: [:index, :show, :update]
   get 'friends', to: 'users#friends'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

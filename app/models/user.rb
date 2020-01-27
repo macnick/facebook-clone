@@ -54,4 +54,10 @@ class User < ApplicationRecord
   def friend?(user)
     friendship.include? user
   end
+
+  def unfriend(user)
+    table = friendships.where(requested_id: user.id).or(inverse_friendships.where(requestor_id: user.id)).ids
+    Friendship.delete(table.first)
+  end
+  
 end
