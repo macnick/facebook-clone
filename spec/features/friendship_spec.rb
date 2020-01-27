@@ -24,7 +24,9 @@ RSpec.describe 'Testing friend request send, confirm and remove' do
       click_button 'Confirm friend'
       expect(page).to have_content('Friendship confirmed')
     end
+  end
 
+  feature 'User can' do
     scenario 'remove friend successfully' do
       visit '/users/sign_in'
       fill_in 'Email', with: 'daniel@test.com'

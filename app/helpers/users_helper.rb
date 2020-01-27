@@ -29,5 +29,4 @@ module UsersHelper
               method: :post, class: 'form-control btn btn-info mt-1',
               id: "button-#{user.id}"
   end
-
 end

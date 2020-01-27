@@ -11,5 +11,4 @@ class UsersController < ApplicationController
   end
 
   def friends; end
-
 end

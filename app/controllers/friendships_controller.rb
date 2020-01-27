@@ -36,10 +36,11 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    fs = current_user.friendships.where(friend_id: params[:friend_id]).ids.concat(current_user.inverse_friendships.where(user_id: params[:friend_id]).ids)
+    fs = current_user.friendships.where(friend_id: params[:friend_id]).ids
+      .concat(current_user.inverse_friendships.where(user_id: params[:friend_id]).ids)
     Friendship.delete(fs)
 
-    flash[:success] = "Friend removed successfully"
+    flash[:success] = 'Friend removed successfully'
     redirect_to friends_path
   end
 end
