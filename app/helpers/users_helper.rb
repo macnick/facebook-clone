@@ -24,7 +24,7 @@ module UsersHelper
     end
   end
 
-  def remove_friend(user)
+  def delete_friend(user)
     button_to 'Remove Friend', { controller: 'friendships', action: 'destroy', friend_id: user },
               method: :post, class: 'form-control btn btn-info mt-1',
               id: "button-#{user.id}"
