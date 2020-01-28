@@ -1,16 +1,25 @@
-# Project Setup: Milestone 7
+# Project Facebook Clone
 
-In this project, we will setup the project requirement for this milestone. Below is the link
-to odin project instructions:
+Welcome to Friendbook. In this project, we recreated the basic functionality of facebook. This is the last project of Microverse's Rails curriculum.
 
-[Getting Started](https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project)
+### Features
+
+- Users
+
+  - Sign up using their real facebook account
+  - Create/delete posts
+  - Like posts
+  - Comment on posts
+  - Send and accept friendship requests
+  - Remove friends
 
 ### Requirements
 
 ```
 - A Cloud Server running Linux (Ubuntu 18.04) or (Mac OS)
 - PostgreSQL installed and running.
-- Ruby on Rails installed and running.
+- Ruby 2.6.4
+- Rails 5.2.3
 - A basic familiarity with Ruby on Rails
 
 ```
