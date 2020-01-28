@@ -68,7 +68,7 @@ Feel free to check the [issues page](https://github.com/macnick/facebook-clone/i
 
 ## Show your support
 
-Give a ⭐️ if you like this project!
+Give us a ⭐️ if you like this project!
 
 ## 📝 License
 
