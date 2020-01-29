@@ -77,8 +77,13 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: fb_clone_production
+#   username: fb-clone
+#   password: foobar12345
 production:
   <<: *default
-  database: fb_clone_production
-  username: fb-clone
-  password: foobar12345
+  database: fb_production
+  username: fb
+  password: <%= ENV['FB_DATABASE_PASSWORD'] %>
