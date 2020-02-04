@@ -13,6 +13,10 @@ Welcome to Friendbook. In this project, we recreated the basic functionality of 
   - Send and accept friendship requests
   - Remove friends
 
+### Screenshot
+
+![screenshot](app/assets/images/screenshot.png)
+
 ### Requirements
 
 ```
