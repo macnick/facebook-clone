@@ -17,6 +17,10 @@ Welcome to Friendbook. In this project, we recreated the basic functionality of 
 
 ![screenshot](app/assets/images/screenshot.png)
 
+### Live link
+
+Follow the link to access Friendbook: https://secret-sea-76381.herokuapp.com/
+
 ### Requirements
 
 ```
