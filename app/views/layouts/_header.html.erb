@@ -12,7 +12,7 @@
           <% if signed_in? %>
             <li class="nav-item text-white"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'text-danger pr-4' %></li>
             <a href="">
-            <%#= image_tag asset_path('default_avatar'), class: "img-fluid profile-avatar img-pro-size" %>
+            <%#= image_tag('default_avatar.png', class: "img-fluid profile-avatar img-pro-size") %>
             <span><%= link_to "#{current_user.first_name}", posts_path, class: 'text-white pl-2' %></span>
             <li class="nav-item text-white">
               <span><%= link_to "Friends (#{all_friends})", friends_path, class: 'text-white pl-2' %></span>
