@@ -261,9 +261,15 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
+<<<<<<< HEAD
   config.omniauth :facebook, '3451859098219919', 'a640e7cb82ee1f48b88775ad4686525c', callback_url: 'https://secret-sea-76381.herokuapp.com/auth/facebook/callback'
 
   # ==> Warden configuration 
+=======
+  # config.omniauth :facebook, '3451859098219919', 'a640e7cb82ee1f48b88775ad4686525c', callback_url: 'https://secret-sea-76381.herokuapp.com/auth/facebook/callback'
+  config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET'], callback_url: 'https://secret-sea-76381.herokuapp.com/users/auth/facebook/callback'
+  # ==> Warden configuration
+>>>>>>> master
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
   #
