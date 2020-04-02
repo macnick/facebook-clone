@@ -17,6 +17,10 @@ Welcome to Friendbook. In this project, we recreated the basic functionality of 
 
 ![screenshot](app/assets/images/screenshot.png)
 
+### Live link
+
+Follow the link to access Friendbook: https://secret-sea-76381.herokuapp.com/
+
 ### Requirements
 
 ```
@@ -36,6 +40,15 @@ Welcome to Friendbook. In this project, we recreated the basic functionality of 
 - gem 'omniauth-facebook', '~> 5.0'
 - gem 'pg', '>= 0.18', '< 2.0'
 - gem 'rails', '~> 5.2.3'
+
+### To run on windows system we have to install the following gems
+
+- gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+- gem 'autoprefixer-rails'
+
+Add this to ```ENV['EXECJS_RUNTIME'] = 'Node'```  ```boot.rb``` file 
+
+Uncomment ``` #workers Integer(ENV['WEB_CONCURRENCY'] || 2) ``` in ```puma.rb``` file
 
 #### Optional
 
@@ -69,6 +82,12 @@ rails db:seed
 Contributions, issues and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/macnick/facebook-clone/issues).
+
+1. Fork it ( https://github.com/macnick/facebook-clone/fork )
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Add some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create a new Pull Request
 
 ## Show your support
 
