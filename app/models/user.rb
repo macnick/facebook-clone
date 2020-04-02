@@ -59,4 +59,9 @@ class User < ApplicationRecord
     table = friendships.where(requested_id: user.id).or(inverse_friendships.where(requestor_id: user.id)).ids
     Friendship.delete(table.first)
   end
+
+  # Option 1: Purely overriding the #as_json method
+  def as_json(options={})
+    { first: self.first_name,  last: self.last_name }  # NOT including the email field
+  end
 end
