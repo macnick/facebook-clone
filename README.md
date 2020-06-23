@@ -1,6 +1,6 @@
 # Project Facebook Clone
 
-Welcome to Friendbook. In this project, we recreated the basic functionality of facebook. This is the last project of Microverse's Rails curriculum.
+Welcome to Friendbook. In this project, we recreated the basic functionality of Facebook. This is the last project of the Microverse's Rails curriculum.
 
 ### Features
 
@@ -79,7 +79,7 @@ rails db:seed
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/macnick/facebook-clone/issues).
 
