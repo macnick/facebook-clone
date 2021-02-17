@@ -4,8 +4,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.4'
-gem 'bootsnap', '~> 1.7', '>= 1.7.2'
-# gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', '~> 1.7', '>= 1.7.2', require: false
 gem 'bootstrap', '~> 4.3.1'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'coffee-rails', '~> 4.2'
