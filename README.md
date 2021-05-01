@@ -98,5 +98,3 @@ Give us a ⭐️ if you like this project!
 This project is [MiT](LICENSE) licensed.
 
 ```
-
-```
