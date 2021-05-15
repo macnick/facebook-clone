@@ -41,7 +41,7 @@ Follow the link to access Friendbook: https://secret-sea-76381.herokuapp.com/
 - gem 'pg', '>= 0.18', '< 2.0'
 - gem 'rails', '~> 5.2.3'
 
-### To run on windows system we have to install the following gems
+### To run on windows system you have to install the following gems
 
 - gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 - gem 'autoprefixer-rails'
