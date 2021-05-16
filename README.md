@@ -65,13 +65,13 @@ rails db:migrate
 rails db:seed
 ```
 
-👤 **Author1**
+👤 **Author 1**
 
 - Github: [@macnick](https://github.com/macnick)
 - Twitter: [@mac_experts](https://twitter.com/mac_experts)
 - Linkedin: [Nick Haralampopoulos](https://www.linkedin.com/in/nick-haralampopoulos-26a55412a/)
 
-👤 **Author2**
+👤 **Author 2**
 
 - Github: [@addod19](https://github.com/addod19)
 - Twitter: [@DanielLarbiAdd1](https://twitter.com/DanielLarbiAdd1)
