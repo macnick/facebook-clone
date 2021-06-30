@@ -1,6 +1,6 @@
 # Project Facebook Clone
 
-Welcome to Friendbook. In this project, we recreated the basic functionality of Facebook. This is the last project of the Microverse's Rails curriculum.
+Welcome to Friendbook. In this project, we recreated the basic functionality of a social network like Facebook. This is the last project of the Microverse's Rails curriculum.
 
 ### Features
 
